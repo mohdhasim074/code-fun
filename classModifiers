@@ -1,0 +1,26 @@
+In Java, class modifiers, also known as access modifiers or visibility modifiers, are keywords that control the visibility and accessibility of classes, methods, and fields within a class. There are four main class modifiers in Java:
+
+1. **public** : A class, method, or field declared as `public` can be accessed from anywhere in the code, whether it's in the same package or a different package. It has the widest scope of accessibility.
+
+2. **_private_**: A class member (method or field) declared as `private` is only accessible within the class it is defined. It is no t visible outside of the class, even within the same package.
+
+3. **protected**: A `protected` class member is accessible within its own class, its subclasses, and classes in the same package. It is not accessible from classes in other packages, except when the subclass is in a different package.
+
+4. **default (no modifier)**: If no access modifier is specified, the class member has package-private or default visibility. It is accessible within the same package but not from classes in different packages.
+
+Here's an example illustrating the use of class modifiers in Java:
+
+```java
+package com.example; // This is the package declaration
+
+public class MyClass {
+    public int publicField; // Accessible from anywhere
+    private int privateField; // Accessible only within MyClass
+    protected int protectedField; // Accessible within MyClass and its subclasses
+    int defaultField; // Package-private, accessible within com.example package
+}
+```
+
+In this example, `publicField` can be accessed from anywhere, `privateField` is only accessible within the `MyClass`, `protectedField` can be accessed within `MyClass` and its subclasses, and `defaultField` is package-private, so it's accessible within the `com.example` package but not outside of it.
+
+These modifiers help you control the encapsulation and visibility of your class members, which is a fundamental concept in object-oriented programming for managing data hiding and abstraction.
